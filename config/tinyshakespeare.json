@@ -1,0 +1,13 @@
+{
+    "num_epochs": 2000,
+    "batch_size": 128,
+    "eval_interval": 40,
+    "learning_rate": 0.001,
+    "lr_decay_iters": 2100,
+    "min_lr": 5e-05,
+    "warmup_iters": 150,
+    "context_size": 128,
+    "embd_size": 128,
+    "dropout": 0.05,
+    "text_url": "https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt"
+}
