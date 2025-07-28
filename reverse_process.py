@@ -75,13 +75,13 @@ def reverse_process_generate(model, prompt, max_length, num_steps, tokenizer, do
 def create_argparser():
     parser = argparse.ArgumentParser(description="Script to do reverse process with a trained LLaDa model")
 
-    parser.add_argument("--config", type=str, help="Path to train config file")
-    parser.add_argument("--checkpoint", type=str, help="Path to model checkpoint")
+    parser.add_argument("--config", type=str, required=True, help="Path to train config file")
+    parser.add_argument("--checkpoint", type=str, required=True, help="Path to the trained model checkpoint")
     parser.add_argument("--prompt", type=str, default="", help="Prompt for text generation")
 
     parser.add_argument("--num_steps", type=int, default=50, help="Number of reverse process steps")
     parser.add_argument("--do_sampling", type=bool, default=False, help="Do distribution sampling")
-    parser.add_argument("--low_conf_remask", type=bool, default=True, help="Do low confidence remasking")
+    parser.add_argument("--low_conf_remask", type=bool, default=True, help="Use low confidence remasking strategy")
 
 
     args = parser.parse_args()

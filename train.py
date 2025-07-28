@@ -189,7 +189,7 @@ def load_config(config_path):
 def create_argparser():
     parser = argparse.ArgumentParser(description="Script to download dataset and train LLaDa model")
 
-    parser.add_argument("--config", type=str, help="Path to train config file")
+    parser.add_argument("--config", type=str, required=True, help="Path to train config file")
     parser.add_argument("--wandb", action='store_true', help="Use weights&biases for experiment tracking")
 
     args = parser.parse_args()
